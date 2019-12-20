@@ -4,7 +4,7 @@ LIB_DIR = '/home/baloneo/PythonProject/HCNetPythonSDK-Linux/hklib'
 
 sdk = HIKVisionSDK(lib_dir=LIB_DIR,
                    username='admin',
-                   ip='192.168.1.104',
+                   ip='192.168.1.124',
                    password='Admin12345')
 try:
     sdk.init()
