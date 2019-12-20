@@ -1,1 +1,1 @@
-cp ../hikvision ../.venv/lib/python3.6/site-packages -r
+cp ./hikvision .venv/lib/python3.6/site-packages -r
