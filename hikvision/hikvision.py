@@ -158,7 +158,7 @@ class HIKVisionSDK(object):
         if not result:
             self.print_log('<<<变倍失败')
             return False
-        self.print_log('success')
+        self.print_log('success %s', zoom)
         return True
 
     def get_infrared_value(self) -> tuple:

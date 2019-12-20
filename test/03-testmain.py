@@ -19,7 +19,7 @@ else:
     print('ok2', ok)
     value = sdk.get_zoom(release_resources=False)
     print('zoom value', value)
-    ok = sdk.set_zoom(zoom=2, release_resources=True)
+    ok = sdk.set_zoom(zoom=0, release_resources=True)
     print('zoom ok', ok)
 
 
