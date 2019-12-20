@@ -163,7 +163,11 @@ class HIKVisionSDK(object):
     def get_infrared_value(self) -> tuple:
         os.chdir(self.lib_dir)
         logger.debug('开始获取红外')
-        min_temper, max_temper, aver_temp = get_temper_info(ip=self.ip, username=self.username, password=self.password)
+        try:
+            min_temper, max_temper, aver_temp = get_temper_info(ip=self.ip, username=self.username, password=self.password)
+        except Exception as e:
+            logger.error(e)
+            min_temper, max_temper, aver_temp = -1, -1, -1
         logger.debug(" min_temper {0}, max_temper {1}, aver_temp {2}".format(min_temper, max_temper, aver_temp))
         os.chdir(self.old_cwd)
         return min_temper, max_temper, aver_temp
