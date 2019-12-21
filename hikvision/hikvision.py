@@ -118,7 +118,7 @@ class HIKVisionSDK(object):
         if not result:
             self.print_log('<<<获取变焦失败')
             return -1
-        self.print_log('value', struct_cfg.fOpticalZoomLevel)
+        self.print_log('value %s' % struct_cfg.fOpticalZoomLevel)
         return struct_cfg.fOpticalZoomLevel
 
     @_release_wrapper
@@ -158,7 +158,7 @@ class HIKVisionSDK(object):
         if not result:
             self.print_log('<<<变倍失败')
             return False
-        self.print_log('success %s', zoom)
+        self.print_log('success %s' % zoom)
         return True
 
     def get_infrared_value(self) -> tuple:
