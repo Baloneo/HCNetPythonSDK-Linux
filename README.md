@@ -10,7 +10,7 @@
 
 ## Bugs
 * 如果不在和`setup.py`同级目录执行`install`会失败
-
+* libiconv.so.2 链接的时候可能会失败 删掉即可
 ## TODO
 
 
